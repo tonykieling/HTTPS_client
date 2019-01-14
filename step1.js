@@ -19,14 +19,14 @@ https.get(destiny, function (response){
   let count = 0;
   response.on('data', function (data){
     // console.log('Chunck received! ', data);
-    wholeContent += data + " --- NEWLINE (" + ++count + ")\n";
+    // wholeContent += data + " --- NEWLINE (" + ++count + ")\n";
     console.log(data + " --- NEWLINE (" + count + ")\n");
   });
 
   response.on('end', function (){
-    // console.log('Response stream has completed.');
+    console.log('Response stream has completed.');
     console.log("ending the process");
-    console.log("the wholeContent: \n" + wholeContent);
+    // console.log("the wholeContent: \n" + data);
   });
 console.log("done!");
 })
