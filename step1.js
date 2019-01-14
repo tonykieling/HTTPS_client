@@ -16,14 +16,17 @@ let wholeContent = "";
 https.get(destiny, function (response){
   response.setEncoding('utf8');
 
+  let count = 0;
   response.on('data', function (data){
     // console.log('Chunck received! ', data);
-    wholeContent += data + " --- NEWLINEHERE!!!\n";
+    wholeContent += data + " --- NEWLINE (" + ++count + ")\n";
+    console.log(data + " --- NEWLINE (" + count + ")\n");
   });
 
   response.on('end', function (){
     // console.log('Response stream has completed.');
-    console.log(wholeContent);
+    console.log("ending the process");
+    console.log("the wholeContent: \n" + wholeContent);
   });
-  console.log(wholeContent + "\nEND");
+console.log("done!");
 })
