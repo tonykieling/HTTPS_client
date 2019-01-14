@@ -20,7 +20,7 @@ https.get(destiny, function (response){
   response.on('data', function (data){
     // console.log('Chunck received! ', data);
     // wholeContent += data + " --- NEWLINE (" + ++count + ")\n";
-    console.log(data + " --- NEWLINE (" + count + ")\n");
+    console.log(data + " --- NEWLINE (" + ++count + ")\n");
   });
 
   response.on('end', function (){
