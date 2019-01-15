@@ -19,7 +19,7 @@ module.exports = function getHTML(destiny){
       printHTML(wholeContent);
     });
   });
-
+  // return wholeContent;
   function printHTML(data){
     console.log(data);
   }

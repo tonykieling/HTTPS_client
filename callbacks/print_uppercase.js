@@ -8,8 +8,9 @@ let dataFromUser = {
 
 
 function printLowerCase(data){
+  console.log("Printing LOWERCASE MODE function staring...");
   console.log(data.toLowerCase());
 }
 
 
-getHTML(dataFromUser, printLowerCase);
+getHTML(dataFromUser, printLowerCase, "Printing UPPERCASE MODE done!!");
