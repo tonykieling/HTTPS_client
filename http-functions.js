@@ -14,12 +14,10 @@ module.exports = function getHTML(destiny){
     });
 
     response.on('end', function (){
-      // console.log("YYYYYYYYYYY: ", wholeContent);
-      // console.log("typeof: ", typeof(wholeContent));
       printHTML(wholeContent);
     });
   });
-  // return wholeContent;
+
   function printHTML(data){
     console.log(data);
   }

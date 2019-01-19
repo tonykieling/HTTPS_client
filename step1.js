@@ -11,22 +11,17 @@ let destiny = {
   path: '/http-examples/step1.html'
 }
 
-let wholeContent = "";
-
 https.get(destiny, function (response){
   response.setEncoding('utf8');
 
   let count = 0;
   response.on('data', function (data){
-    // console.log('Chunck received! ', data);
-    // wholeContent += data + " --- NEWLINE (" + ++count + ")\n";
-    console.log(data + " --- NEWLINE (" + ++count + ")\n");
-  });
+    console.log(`- CHUNCK ${++count} RECEIVED AS:\n${data}`);
+   });
 
   response.on('end', function (){
     console.log('Response stream has completed.');
     console.log("ending the process");
-    // console.log("the wholeContent: \n" + data);
   });
 console.log("done!");
 })

@@ -3,14 +3,14 @@ let getHTML = require('../module_callbacks');
 
 let dataFromUser = {
   host: 'sytantris.github.io',
-  path: '/http-examples/step6/lowercase.html'
+  path: '/http-examples/step6/uppercase.html'
 };
 
 
-function printLowerCase(data){
-  console.log("Printing LOWERCASE MODE function staring...");
-  console.log(data.toLowerCase());
+function printUpperCase(data){
+  console.log("Printing UPPERCASE MODE function staring...");
+  console.log(data.toUpperCase());
 }
 
 
-getHTML(dataFromUser, printLowerCase, "Printing UPPERCASE MODE done!!");
+getHTML(dataFromUser, printUpperCase, "Printing UPPERCASE MODE done!!");

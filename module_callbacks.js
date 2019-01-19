@@ -14,7 +14,7 @@ module.exports = function getHTML(destiny, callback, message){
 
     response.on('end', function() {
       callback(wholeContent);
-      console.log(message);
+      // console.log(message);
     });
   });
 };

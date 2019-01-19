@@ -1,7 +1,6 @@
 
 function getHTML(destiny, callbackF){
   let https = require('https');
-  console.log("XXXXXXXXXXXXXXXX: ", destiny, callbackF);
 
   let wholeContent = "";
 
@@ -14,16 +13,15 @@ function getHTML(destiny, callbackF){
 
     response.setEncoding('utf8');
 
-    let count = 0;
     response.on('data', function (data){
-      wholeContent += data + " --- NEWLINE (" + ++count + ")\n";
-      console.log(data + " --- NEWLINE (" + count + ")\n");
+      wholeContent += data;
     });
 
     response.on('end', function (){
+      console.log("Receiving is done!");
+      console.log("Calling print function.\n");
       callbackF(wholeContent);
     });
-  console.log("done!");
   });
 };
 
@@ -43,6 +41,9 @@ if (!dataFromUser) {
 
 function printHTML(data){
   console.log(data);
+  console.log("Printing is done!\n");
 }
 
 getHTML(dataFromUser, printHTML);
+
+// sytantris.github.io/http-examples/step1.html
